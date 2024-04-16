@@ -28,6 +28,10 @@
 - `/osuffix reset <player>` - Remove the custom suffix.
 - `/osuffix reload` - Reload config.yml and lang.yml
 
+## Placeholders
+
+- `%osuffixes_suffix%` - Displays the Suffix
+
 ## Permissions
 
 - `osuffixes.set` - Allows players to set custom suffix.
