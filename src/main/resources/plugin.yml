@@ -1,0 +1,11 @@
+name: oSuffixes
+version: '${project.version}'
+main: me.oz1p.osuffixes.OSuffixes
+api-version: '1.20'
+softdepend: [PlaceholderAPI]
+authors: [Oz1p]
+description: Simple plugin for Suffixes
+commands:
+  oSuffixes:
+    aliases: os
+    usage: /osuffixes

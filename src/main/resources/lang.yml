@@ -1,0 +1,14 @@
+prefix: "&7[&#FFE259&lo&#FFDB58&lS&#FFD357&lu&#FFCC56&lf&#FFC555&lf&#FFBD54&li&#FFB653&lx&#FFAE52&le&#FFA751&ls&7]&r"
+messages:
+  help:
+    text: "%prefix% Command List"
+    Line1: "§e/os help §7- §fCommand List"
+    Line2: "§e/os set [player] [suffix] §7- §fSet Players Suffix"
+    Line3: "§e/os remove [player] §7- §fReset Players Suffix"
+    Line4: "§e/os reload §7- §fReload Configuration and Language"
+  reloaded: "%prefix% &3Plugin reloaded!"
+  suffixes:
+    set: "%prefix% Successfully set &a%player%'s &rsuffix to %suffix%" # Supports PlaceholderAPI
+    reset: "%prefix% Successfully removed &a%player%'s &rsuffix!" # Supports PlaceholderAPI
+  player-offline: "%prefix% &c%player% is offline!"
+  no-perms: "%prefix% &cYou don't have permission!"
