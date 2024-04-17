@@ -25,7 +25,7 @@
 ## Commands
 
 - `/osuffix set <player> <suffix>` - Set a custom suffix.
-- `/osuffix reset <player>` - Remove the custom suffix.
+- `/osuffix remove <player>` - Remove the custom suffix.
 - `/osuffix reload` - Reload config.yml and lang.yml
 
 ## Placeholders
