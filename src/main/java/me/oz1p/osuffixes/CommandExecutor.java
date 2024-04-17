@@ -4,6 +4,7 @@ import me.clip.placeholderapi.PlaceholderAPI;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.event.HoverEvent;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -77,13 +78,14 @@ public class CommandExecutor implements org.bukkit.command.CommandExecutor {
             commandSender.sendMessage(mgr.getText("messages.help.Line4"));
             return true;
         }
-        commandSender.sendMessage("§aThis Server is using §eoSuffixes §61.0§a by §3Oz1p");
+        commandSender.sendMessage("§aThis Server is using §eoSuffixes §6"+ OSuffixes.version +"§a by §3Oz1p");
         commandSender.sendMessage("§aUse §6/os help§a for Help!");
-        commandSender.sendMessage("§aIf you want to get the latest §eUpdates §acheck out our §9Github");
-        Component message = Component.text(ChatColor.GREEN + "§9§nhttps://github.com/Oz1p/oSuffixes")
-                .clickEvent(ClickEvent.openUrl("https://github.com/Oz1p/oSuffixes"))
+        commandSender.sendMessage("§aIf you want to get the latest §eUpdates §acheck out our §6Spigot");
+        Component message = Component.text(ChatColor.GREEN + "§9§nhttps://www.spigotmc.org/resources/osuffixes%E2%AD%90-lightweight-suffixes-manager.116232/")
+                .clickEvent(ClickEvent.openUrl("https://www.spigotmc.org/resources/osuffixes%E2%AD%90-lightweight-suffixes-manager.116232/"))
                 .hoverEvent(HoverEvent.showText(Component.text("§aClick Me!")));
-        commandSender.sendMessage(message);
+        String legacyMessage = LegacyComponentSerializer.legacySection().serialize(message);
+        commandSender.sendMessage(legacyMessage);
         return true;
     }
 }

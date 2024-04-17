@@ -5,7 +5,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import java.util.logging.Level;
 public final class OSuffixes extends JavaPlugin {
-    public static String version = "1.0";
+    public static String version = "1.1";
     @Override
     public void onEnable() {
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") == null) {

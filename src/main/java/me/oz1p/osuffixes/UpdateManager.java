@@ -2,6 +2,7 @@ package me.oz1p.osuffixes;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.event.ClickEvent;
 import net.kyori.adventure.text.event.HoverEvent;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -20,12 +21,13 @@ public class UpdateManager implements Listener {
                 try {
                     String text = getTextFromURL(url);
                     if(!text.equalsIgnoreCase(OSuffixes.version)){
-                        event.getPlayer().sendMessage("§aYou are using version §6" + OSuffixes.version);
-                        event.getPlayer().sendMessage("§aOn our §9Github §ais a new version §7(§6" + text + "§7)");
-                        Component message = Component.text(ChatColor.GREEN + "§9§nhttps://github.com/Oz1p/oSuffixes")
-                                .clickEvent(ClickEvent.openUrl("https://github.com/Oz1p/oSuffixes"))
+                        event.getPlayer().sendMessage("§aYou are using §eoSuffixes §6v" + OSuffixes.version);
+                        event.getPlayer().sendMessage("§aOn our §6Spigot §ais a new version §7(§6" + text + "§7)");
+                        Component message = Component.text(ChatColor.GREEN + "§9§nhttps://www.spigotmc.org/resources/osuffixes%E2%AD%90-lightweight-suffixes-manager.116232/")
+                                .clickEvent(ClickEvent.openUrl("https://www.spigotmc.org/resources/osuffixes%E2%AD%90-lightweight-suffixes-manager.116232/"))
                                 .hoverEvent(HoverEvent.showText(Component.text("§aClick Me!")));
-                        event.getPlayer().sendMessage(message);
+                        String legacyMessage = LegacyComponentSerializer.legacySection().serialize(message);
+                        event.getPlayer().sendMessage(legacyMessage);
                     }
                 } catch (IOException e) {
                 }
